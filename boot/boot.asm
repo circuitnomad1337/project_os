@@ -17,6 +17,12 @@ _start:
     mov si, message
     call print
 
+    ; Next goal:
+    ; load the GDT, and design it. 
+    ; Try to do it in your own way of design, exactly like you want it.
+    ; Also, gather information about GDTs in general.
+    ; Bit by bit. (almost like brick by brick lol)
+
 print:
     lodsb          ; Moves SI into AL, lodsb = LOaD String Byte
     or al, al      ; Checks if al is null-terminator (0x00)
