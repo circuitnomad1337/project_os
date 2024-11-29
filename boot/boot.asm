@@ -33,8 +33,18 @@ protModeSetup:
     
 [BITS 32]
 
+VIDEO_MEMORY equ 0xB8000
+WHITE_ON_BLACK equ 0x0f
+
 protmode:
-    hlt
+    mov ebx, 0xB8000
+    mov ah, 0x0F
+    mov al, 'P'
+
+print_32:
+    mov [ebx], ax
+    add ebx, 2
+    ret
 
     ; Next goals:
     ; Set up GDT for Long Mode
