@@ -108,7 +108,13 @@ longModeSetup:
 
 longMode:
     mov rdi, 0xB8000
-    mov rax, 'L o n g '
+    mov rax, 'H e l l '
+    stosq
+
+    mov rax, 'o W o r '
+    stosq
+
+    mov rax, "l d ! "
     stosq
 
 hang:
